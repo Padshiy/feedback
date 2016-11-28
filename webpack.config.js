@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const StylExtractTextPlugin = require("extract-text-webpack-plugin");
 const CSSExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
     context: __dirname + '/frontend',
@@ -11,7 +12,7 @@ module.exports = {
     },
 
     output: {
-        path:       __dirname + '/public',
+        path: __dirname + '/public',
         publicPath: '/',
         filename:   '[name].js'
     },
@@ -27,10 +28,10 @@ module.exports = {
             loader: "pug"
         }, {
             test:   /\.styl$/,
-            loader: StylExtractTextPlugin.extract('css!stylus?resolve url')
+            loader: StylExtractTextPlugin.extract('!css!autoprefixer-loader!stylus?resolve url')
         }, {
             test:   /\.css/,
-            loader: 'style!css!autoprefixer?browsers=last 2 versions'
+            loader: 'style!css'
         }, {
             test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
             loader: 'file?name=[path][name].[ext]'

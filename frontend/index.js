@@ -1,1 +1,1 @@
-import './css/styles.styl'
+import './css/stylus.styl'

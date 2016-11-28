@@ -1,0 +1,15 @@
+mixin form(title, valueArray, textArray, placeholderFirstName, placeholderLastName, placeholderEmail, placholderTextarea, valueSubmit)
+    form.footer__form.form
+        h2.form__header= title
+        input.form__input.first(type='text' name='first name' placeholder=placeholderFirstName)
+        input.form__input.last(type='text' name='last name' placeholder=placeholderLastName)
+        input.form__input.email(type='email' name='email' placeholder=placeholderEmail)
+        .form__select
+            .select-arrow-1
+            .select-arrow-2
+            select.select.selectpicker
+            - for(var i=0; i<valueArray.length; i++) {
+                option(value=valueArray[i])= textArray[i]
+            - }
+        textarea.form__textarea(placeholder=placholderTextarea cols='30' rows='3')
+        input.form__submit(type='submit' value=valueSubmit)
