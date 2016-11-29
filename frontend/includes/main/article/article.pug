@@ -2,8 +2,8 @@ mixin article(text1, text2, text3, href, name)
     .main__article.article
         .article__text1.text1
             h1.text1__header
-                p= text1
-                p= text2
+                p.text1__main= text1
+                p.text1__main= text2
         .article__text2.text2
             span.text2__main= text3
         a.article__button.button(href=href)= name

@@ -8,8 +8,8 @@ mixin form(title, valueArray, textArray, placeholderFirstName, placeholderLastNa
             .select-arrow-1
             .select-arrow-2
             select.select.selectpicker
-            - for(var i=0; i<valueArray.length; i++) {
-                option(value=valueArray[i])= textArray[i]
-            - }
-        textarea.form__textarea(placeholder=placholderTextarea cols='30' rows='3')
+                - for(var i=0; i<valueArray.length; i++) {
+                    option(value=valueArray[i])= textArray[i]
+                - }
+        textarea.form__textarea(placeholder=placholderTextarea cols='30' rows='4')
         input.form__submit(type='submit' value=valueSubmit)
