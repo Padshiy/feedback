@@ -28,7 +28,7 @@ module.exports = {
             loader: "pug"
         }, {
             test:   /\.styl$/,
-            loader: StylExtractTextPlugin.extract('!css!autoprefixer-loader!stylus?resolve url')
+            loader: StylExtractTextPlugin.extract('css!autoprefixer-loader!stylus?resolve url')
         }, {
             test:   /\.css/,
             loader: 'style!css'

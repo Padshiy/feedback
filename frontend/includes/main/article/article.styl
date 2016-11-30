@@ -1,19 +1,31 @@
 .main__article
   float right
-  margin-right 11.2%
+  margin-right 11.6%
   margin-top 13.9%
   position relative
+  @media screen and (max-width 600px)
+    margin-top 8.9%
 
 .article
   width 36.7%
-  height 45.5%
+  height 264px
+  @media screen and (max-width 1000px)
+    height 180px
+  @media screen and (max-width 800px)
+    height 130px
+  @media screen and (max-width 700px)
+    height 105px
+  @media screen and (max-width 500px)
+    height 85px
+  @media screen and (max-width 500px)
+    height 70px
 
 .text1__header
   text-transform uppercase
   font-weight bold
-  font-size 1.45em
+  font-size 1em
   line-height 1
-  letter-spacing 0.67px
+  letter-spacing 2.9px
   color #fff
 
 .text1__main
@@ -22,11 +34,11 @@
 .text2__main
   font-weight normal
   line-height 1.5
-  letter-spacing 0.67px
+  letter-spacing 0.9px
   color #f9fbe8
   display inline-block
   text-align justify
-  font-size .8em
+  font-size .6em
 
 .text2
   margin-top 6%
@@ -38,13 +50,18 @@
 
 .button
   color #ffffff
-  width 33.4%
+  width 33.1%
   height 20%
   background-color #68EEAC
   text-align center
   line-height 3.6em
   text-transform uppercase
   border-radius 8px
-  font-size .8em
+  font-size .55em
   letter-spacing 2.6px
   text-decoration none
+  @media screen and (max-width 500px)
+    border-radius 5px
+  @media screen and (max-width 400px)
+    letter-spacing 1.6px
+    line-height 4.6em
